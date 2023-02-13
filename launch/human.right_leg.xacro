@@ -2,7 +2,7 @@
 <robot 
     xmlns:xacro="http://www.ros.org/wiki/xacro">
     <!-- right leg -->
-    <xacro:macro name="uthai_right_leg" params="parent dxl_effort dxl_speed">
+    <xacro:macro name="human_right_leg" params="parent dxl_effort dxl_speed">
         <!-- right hip yaw joint -->
         <joint name="r_hip_yaw_joint" type="revolute">
             <axis xyz="0 0 1" />

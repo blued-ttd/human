@@ -5,7 +5,7 @@
     <xacro:macro name="insert_mesh_base_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/base.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/base.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -13,7 +13,7 @@
     <xacro:macro name="insert_mesh_r_hip_yaw_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_hip_yaw.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_hip_yaw.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -21,7 +21,7 @@
     <xacro:macro name="insert_mesh_r_hip_roll_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_hip_roll.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_hip_roll.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -29,7 +29,7 @@
     <xacro:macro name="insert_mesh_r_hip_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_hip_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_hip_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -37,7 +37,7 @@
     <xacro:macro name="insert_mesh_r_knee_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_knee_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_knee_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -45,7 +45,7 @@
     <xacro:macro name="insert_mesh_r_ankle_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_ankle_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_ankle_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -53,7 +53,7 @@
     <xacro:macro name="insert_mesh_r_ankle_roll_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/r_ankle_roll.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/r_ankle_roll.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -61,7 +61,7 @@
     <xacro:macro name="insert_mesh_l_hip_yaw_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_hip_yaw.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_hip_yaw.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -69,7 +69,7 @@
     <xacro:macro name="insert_mesh_l_hip_roll_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_hip_roll.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_hip_roll.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -77,7 +77,7 @@
     <xacro:macro name="insert_mesh_l_hip_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_hip_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_hip_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -85,7 +85,7 @@
     <xacro:macro name="insert_mesh_l_knee_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_knee_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_knee_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -93,7 +93,7 @@
     <xacro:macro name="insert_mesh_l_ankle_pitch_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_ankle_pitch.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_ankle_pitch.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>
@@ -101,7 +101,7 @@
     <xacro:macro name="insert_mesh_l_ankle_roll_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://meshes/l_ankle_roll.STL" scale="1 1 1" />
+            <mesh filename="package://human/meshes/l_ankle_roll.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>

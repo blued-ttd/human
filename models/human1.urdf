@@ -36,6 +36,7 @@
         <parent link="world"/>
         <child link="base_link"/>
     </joint>
+
   <!-- base_link -->  
   <link name="base_link"/>
   <joint name="base_fixed" type="fixed">
@@ -43,6 +44,7 @@
     <parent link="base_link"/>
     <child link="base_footprint"/>
   </joint>
+
   <!-- base_footprint --> 
   <link name="base_footprint">
     <visual>
@@ -65,6 +67,7 @@
       <inertia ixx="0.00504324" ixy="-0.00000002" ixz="-0.00000358" iyy="0.00051942" iyz="0.00000000" izz="0.00510248"/>
     </inertial>
   </link>
+
   <!-- imu joint -->
   <link name="imu_link"/> 
   <joint name="imu_fixed" type="fixed">
@@ -72,13 +75,15 @@
     <parent link="base_footprint"/>
     <child link="imu_link"/>
   </joint>
+
+  <!-- right hip yaw  -->
   <!-- right hip yaw joint -->
   <joint name="r_hip_yaw_joint" type="revolute">
     <axis xyz="0 0 1"/>
-    <origin rpy="0 0 -1.570796327" xyz="0.0 -0.09 -0.068"/>
+    <origin rpy="0 0 0" xyz="0 0 0 "/>
     <parent link="base_footprint"/>
     <child link="r_hip_yaw_link"/>
-    <limit effort="10000" lower="-2.8274333886" upper="2.8274333886" velocity="3"/>
+    <limit effort="1000" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="3"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <transmission name="r_hip_yaw_joint_tran">
@@ -91,10 +96,11 @@
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
+
   <!-- right hip yaw link -->
   <link name="r_hip_yaw_link">
     <visual>
-      <origin rpy="0 0 1.4" xyz="0 -0.09 0.672"/>
+      <origin rpy="0 0 ${-pi/2}" xyz="0.0 -0.09 0.704"/>
       <geometry>
         <mesh filename="package://human/meshes/r_hip_yaw.STL" scale="1 1 1"/>
       </geometry>
@@ -112,5 +118,52 @@
       <mass value="0.090718"/>
       <inertia ixx="0.00014114" ixy="0.00000000" ixz="0.00000000" iyy="0.00002016" iyz="0.00000000" izz="0.00014272"/>
     </inertial>
-  </link>  
+  </link>
+  <!--  -->
+
+  <!-- right hip roll  -->
+  <!-- right hip roll joint-->
+  <joint name="r_hip_roll_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="r_hip_yaw_link"/>
+    <child link="r_hip_roll_link"/>
+    <limit effort="1000" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="3"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <transmission name="r_hip_roll_joint_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_roll_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_hip_roll_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- right hip roll link -->
+  <link name="r_hip_roll_link">
+    <visual>
+      <origin rpy="${pi/2} 0 ${-pi/2}" xyz="0.03078 -0.09 0.6895"/>
+      <geometry>
+        <mesh filename="package://human/meshes/r_hip_roll.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human/meshes/r_hip_roll.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </collision>
+    <inertial>
+      <origin xyz="-0.00005878 -0.01433229 -0.01958936"/>
+      <mass value="0.342"/>
+      <inertia ixx="0.00033963" ixy="0.00000054" ixz="-0.00000042" iyy="0.00029059" iyz="0.00001145" izz="0.00015024"/>
+    </inertial>
+  </link>
+  <!--  -->
+
 </robot>
